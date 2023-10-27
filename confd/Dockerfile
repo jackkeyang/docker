@@ -7,7 +7,7 @@ RUN echo "https://mirrors.tuna.tsinghua.edu.cn/alpine/v3.14/main" > /etc/apk/rep
     && apk update \
     && apk add curl \
     && rm -rf /var/lib/apt/lists/* \
-    && ehmox +x /usr/local/bin/confd
+    && chmox +x /usr/local/bin/confd
 
 ENTRYPOINT ["confd", "-watch", "-backend"]
 
